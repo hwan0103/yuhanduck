@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹 과제</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="total">
+    <div id="d_Top">
+        <p id="student_id">학번</p>
+        <p id="student_name">이름</p>
+    </div>
+    <div id="d_Left">
+        <button class="button" id="button_1" onclick="drawCircle()">버튼1</button>
+        <button class="button" id="button_2" onclick="drawListAndImage()">버튼2</button>
+    </div>
+    <div id="d_Right" class="canvas-container">
+        <p id="empty">빈 화면</p>
+    </div>
+</div>
+
+<script>
+    function drawCircle() {
+        var canvas = document.createElement("canvas");
+        canvas.width = 400;
+        canvas.height = 400;
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(200, 200, 100, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.closePath();
+
+        var dRight = document.getElementById("d_Right");
+        dRight.innerHTML = ""; 
+        dRight.appendChild(canvas);
+    }
+
+    function drawListAndImage() {
+        drawList();
+        drawImage();
+    }
+
+    function drawList() {
+        var ul = document.createElement("ul");
+
+        var items = ["로스트아크", "출시년도: 2018년 11월 7일", "장르: MMORPG", "좋아하는 이유: 빛강선"];
+        items.forEach(function(item) {
+            var li = document.createElement("li");
+            li.textContent = item;
+            ul.appendChild(li);
+        });
+
+        var dRight = document.getElementById("d_Right");
+        dRight.innerHTML = ""; 
+        dRight.appendChild(ul);
+    }
+
+    function drawImage() {
+        var img = document.createElement("img");
+        img.src = "https://biz.chosun.com/resizer/bnVK5_SFsR7SjraXjqQeZDcV5rk=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/DRYXNSM7ZZA5HD2Q5F4WQYUUXU.png"; 
+        img.alt = "Image";
+        
+        var dRight = document.getElementById("d_Right");
+        dRight.appendChild(img);
+    }
+</script>
+
+</body>
+</html>
