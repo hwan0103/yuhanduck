@@ -1,0 +1,102 @@
+
+#total {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    border: 1px solid black;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+#d_Top {
+    height: 50px;
+    border: 1px solid black;
+    background-color: aqua;
+    color: blue;
+    font-size: 20px;
+}
+
+#d_Left {
+    width: 160px;
+    height: 400px;
+    float: left;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#d_Right {
+    position: relative;
+    top: -402px;
+    width: 640px;
+    height: 400px;
+    float: right;
+    border: 1px solid black;
+}
+
+#student_id {
+    position: absolute;
+    top: 2.5%;
+    right: 15%;
+    transform: translate(0, -50%);
+    font-family: "Times New Roman", serif;
+}
+
+#student_name {
+    position: absolute;
+    top: 2.5%;
+    right: 5%;
+    transform: translate(0, -50%);
+    font-family: "Times New Roman", serif;
+}
+
+.button {
+    margin: 8px;
+    padding: 8px;
+    display: grid;
+    place-items: center;
+}
+
+#button_1 {
+    background-color: orange;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: "Times New Roman", serif;
+}
+
+#button_2 {
+    background-color: blueviolet;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: "Times New Roman", serif;
+}
+
+#empty {
+    position: relative;
+    width: 640px;
+    height: 400px;
+    float: right;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: greenyellow;
+    color: #FFFFFF;
+    font-size: 50px;
+    font-family: "Times New Roman", serif;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#d_Right img {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
